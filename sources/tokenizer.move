@@ -53,6 +53,13 @@ module tokenizer::Tokenizer {
         max_supply: u64,
         creator: address
     }
+
+    public struct UserWitness has drop {}
+
+// Add this helper function to create a user witness
+public fun create_user_witness(): UserWitness {
+    UserWitness {}
+}
     
     /// Manages the relationship between tokenized coins and ART20 NFTs
     public struct TokenizedCollection<phantom T> has key, store {
@@ -316,6 +323,36 @@ module tokenizer::Tokenizer {
         transfer::share_object(token_info);
         transfer::share_object(tokenized_collection);
     }
+
+    // Wrapper function that uses UserWitness to tokenize a collection
+public entry fun create_token_for_collection_with_publisher(
+    _publisher: &TokenizerPublisher, // Not needed for logic, just for authorization
+    collection_cap: &CollectionCap,
+    name: vector<u8>,
+    symbol: vector<u8>,
+    description: vector<u8>,
+    icon_url_bytes: vector<u8>,
+    decimals: u8,
+    tokens_per_nft: u64,
+    registry: &mut TokenRegistry,
+    clock: &Clock,
+    ctx: &mut TxContext
+) {
+    // Call the original function with UserWitness
+    create_token_for_collection<UserWitness>(
+        UserWitness {}, // Create a new UserWitness instance
+        collection_cap,
+        name,
+        symbol,
+        description,
+        icon_url_bytes,
+        decimals,
+        tokens_per_nft,
+        registry,
+        clock,
+        ctx
+    )
+}
     
     /// Mint additional NFTs and tokens for an existing tokenized collection
     public entry fun mint_additional<T>(
@@ -550,6 +587,8 @@ module tokenizer::Tokenizer {
     }
     
     // ===== View Functions =====
+
+    
     
     /// Get basic information about a token
     public fun get_token_info(token_info: &TokenInfo): (String, String, String, Url, u8, u64, address) {
