@@ -1,0 +1,25 @@
+[package]
+name = "tokenizer"
+edition = "2024.beta"
+
+[dependencies.Sui]
+git = "https://github.com/MystenLabs/sui.git"
+subdir = "crates/sui-framework/packages/sui-framework"
+rev = "framework/mainnet"
+
+[dependencies.artinals]
+git = "https://github.com/artfilabs/artinalsprotocolv1.git"
+rev = "main"
+subdir = "."
+
+
+[addresses]
+tokenizer = "0x0"
+
+
+
+[dev-dependencies]
+# none
+
+[dev-addresses]
+# none
