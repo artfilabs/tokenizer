@@ -1,0 +1,16 @@
+Package
+Testnet: 0x4a254f08e4a114065037f183f330344621a8cb98ca87c185faa9cf81e817aedb
+
+tokenizerCap
+testnet: 0xcc4686b288855164636fe318515410e2a8505f688cb4ef0417c8c58e2fcbe6f3
+
+upgradeCap
+Testnet: 0xf48084bcd6740291fe4327becb8bce90fb4d83503571c0ef7e7561ca5b789ba0
+
+TokenRegistry
+Testnet: 0xb00d8e50cf8f067b3f4b3a40f7c2074cfa931e6ce39e46d015a2b0e0c446a7ea
+
+TokenizerPublisher
+Testnet: 0xaa0ba4b65d169ef9ae07e2b3098d0eab47c61a30dd9d2451b10a8a1ca3192905
+
+# tokenizer
