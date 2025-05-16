@@ -41,3 +41,9 @@ chain-id = "4c78adac"
 original-published-id = "0x9dd3989500f543a95c6250cac62c221c25e9fb0302fb99a8888399feebe879c0"
 latest-published-id = "0x9dd3989500f543a95c6250cac62c221c25e9fb0302fb99a8888399feebe879c0"
 published-version = "1"
+
+[env.mainnet]
+chain-id = "35834a8a"
+original-published-id = "0x6a7724adad3573ef5e69f464603913cc09e3e3254d158981e478cb42ecc20e3c"
+latest-published-id = "0x6a7724adad3573ef5e69f464603913cc09e3e3254d158981e478cb42ecc20e3c"
+published-version = "1"
