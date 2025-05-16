@@ -107,10 +107,10 @@ module tokenizer::TOKENIZER {
         let (mut treasury_cap, metadata) = coin::create_currency(
             witness,
             9, // 9 decimals 
-            b"CICC", 
-            b"Council of International Chambers of Commerce", 
+            b"Default Symbol", 
+            b"Default Token Name", 
             b"Tokenized representation of assets backed by ART20 NFTs", 
-            option::some(url::new_unsafe_from_bytes(b"https://salmon-accused-puma-149.mypinata.cloud/ipfs/bafkreifufqxd6etuy47bosqlwwu5coffoup2a5rrpi3jqrcvdygodgnueu?pinataGatewayToken=Nc4R8TH9sXtjJQUiqvn_ZXvRnNYOlp6eH8lT7JTr0zEUEZV2BjEMU-81HiF2dy5x")), 
+            option::some(url::new_unsafe_from_bytes(b"https://salmon-accused-puma-149.mypinata.cloud/ipfs/bafkreigswgfmfam7x5dguedjmxeptkogbvf4qfrx45fqcruda6afmhdx4y?pinataGatewayToken=Nc4R8TH9sXtjJQUiqvn_ZXvRnNYOlp6eH8lT7JTr0zEUEZV2BjEMU-81HiF2dy5x")), 
             ctx
         );
         
